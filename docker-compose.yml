@@ -14,26 +14,26 @@ services:
    #   - web-proxy-network
 
   # --- n8n  ---
-  n8n_precios:
-    image: n8nio/n8n:latest
-    container_name: n8n_achahui_precios
-    restart: always
+  #n8n_precios:
+  #  image: n8nio/n8n:latest
+  #  container_name: n8n_achahui_precios
+  #  restart: always
      #depends_on:
       #- db_precios
-    environment:
-      - N8N_HOST=${N8N_DOMAIN}
-      - N8N_PORT=5678
-      - N8N_PROTOCOL=https
-      - WEBHOOK_URL=https://${N8N_DOMAIN}/
-      - DB_TYPE=postgresdb
-      - DB_POSTGRESDB_DATABASE=${DB_NAME}
-      - DB_POSTGRESDB_HOST=db_precios
-      - DB_POSTGRESDB_USER=${DB_USER}
-      - DB_POSTGRESDB_PASSWORD=${DB_PASSWORD}
-    volumes:
-      - ../n8n_data:/home/node/.n8n 
-    networks:
-      - web-proxy-network
+  #  environment:
+  #    - N8N_HOST=${N8N_DOMAIN}
+  #    - N8N_PORT=5678
+   #   - N8N_PROTOCOL=https
+  #    - WEBHOOK_URL=https://${N8N_DOMAIN}/
+  #    - DB_TYPE=postgresdb
+   #   - DB_POSTGRESDB_DATABASE=${DB_NAME}
+   #   - DB_POSTGRESDB_HOST=db_precios
+   #   - DB_POSTGRESDB_USER=${DB_USER}
+   #   - DB_POSTGRESDB_PASSWORD=${DB_PASSWORD}
+   # volumes:
+   #   - ../n8n_data:/home/node/.n8n 
+   # networks:
+   #   - web-proxy-network
 
   # --- App React (Frontend) ---
   frontend_precios:
