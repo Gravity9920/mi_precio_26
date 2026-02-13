@@ -37,13 +37,13 @@ services:
 
   # --- App React (Frontend) ---
   frontend_precios:
-  build: ./app
-  container_name: app_mi_precio_26
-  restart: always
-  env_file:
-    - ./app/.env
-  networks:
-    - web-proxy-network
+    build: ./app
+    container_name: app_mi_precio_26
+    restart: always
+    env_file:
+      - ./app/.env
+    networks:
+      - web-proxy-network
     
 
   # --- Backend ---
