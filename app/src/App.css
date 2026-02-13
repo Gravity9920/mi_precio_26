@@ -1,0 +1,212 @@
+/* Importación de tus fuentes personalizadas */
+@font-face {
+  font-family: 'TituloAchahui';
+  src: url('./assets/fonts/1.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ContenidoAchahui';
+  src: url('./assets/fonts/2.ttf') format('truetype');
+}
+
+:root {
+  --primary: #2c3e50;
+  --accent: #3498db;
+  --glass: rgba(255, 255, 255, 0.9);
+}
+
+body {
+  margin: 0;
+  font-family: 'ContenidoAchahui', sans-serif; /* Fuente para todo el contenido */
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+}
+
+.main-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.glass-card {
+  background: var(--glass);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 40px;
+  width: 100%;
+  max-width: 850px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.no-results {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 1rem;
+  color: #2c3e50; /* oscuro */
+  font-weight: 500;
+}
+
+
+.logo-achahui {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+h1 {
+  font-family: 'TituloAchahui', serif; /* Fuente para el título */
+  color: var(--primary);
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Buscador Aestethic (Cambiado el estilo negro por uno más premium) */
+.search-container {
+  margin-bottom: 30px;
+}
+
+.aesthetic-input {
+  width: 100%;
+  padding: 16px 25px;
+  border-radius: 15px;
+  border: 2px solid #d1d9e6;
+  background: #f8f9fb;
+  font-family: 'ContenidoAchahui', sans-serif;
+  font-size: 1.1rem;
+  color: var(--primary);
+  transition: all 0.3s ease;
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.02);
+  box-sizing: border-box;
+}
+
+.aesthetic-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: white;
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.15);
+}
+
+/* Tabla Aesthetic */
+.table-container {
+  overflow-x: auto;
+}
+
+.aesthetic-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.aesthetic-table th {
+  text-align: left;
+  padding: 15px;
+  color: #7f8c8d;
+  font-weight: 600;
+  border-bottom: 2px solid #edf2f7;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.aesthetic-table td {
+  padding: 18px 15px;
+  border-bottom: 1px solid #edf2f7;
+  color: var(--primary);
+}
+
+.price-tag {
+  font-weight: bold;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.badge {
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Layout del Header */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Separa el logo del botón */
+  margin-bottom: 30px;
+}
+.app-header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* separación entre logo y texto */
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  margin: 2px 0 0 0;
+  font-size: 0.95rem;
+  color: #1f2d3a;   /* más oscuro que var(--primary) */
+  font-weight: 600; /* más grosor */
+  letter-spacing: 0.3px;
+}
+
+/* BOTÓN ACTUALIZAR */
+.refresh-btn {
+  background: white;
+  border: 1px solid #d1d9e6;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-family: 'ContenidoAchahui', sans-serif;
+  font-weight: bold;
+  color: var(--primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.refresh-btn:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+}
+
+.refresh-btn:disabled {
+  background: #f0f3f7;
+  color: #95a5a6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Animación de rotación para el icono */
+.spinning {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.size-label {
+  background: #f1f2f6;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #57606f;
+}
+
+.niño, .varon { background: #e3f2fd; color: #1976d2; }
+.niña, .mujer { background: #fce4ec; color: #d81b60; }

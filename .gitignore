@@ -1,0 +1,13 @@
+postgres_data/
+n8n_data/
+node_modules/
+app/node_modules/
+backend/node_modules/
+.env
+app/.env
+backend/.env
+dist/
+build/
+*.log
+.DS_Store
+.docker
