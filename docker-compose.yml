@@ -52,7 +52,7 @@ services:
     #depends_on:
       #- db_precios
     environment:
-      - DATABASE_URL=postgres://${DB_USER}:${DB_PASSWORD}@db_precios:5432/${DB_NAME}
+      - DATABASE_URL=postgres://${DB_USER}:${DB_PASSWORD}@db_precios_colegios:5432/${DB_NAME}
     networks:
       - web-proxy-network
 
