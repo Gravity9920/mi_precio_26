@@ -18,8 +18,8 @@ services:
     image: n8nio/n8n:latest
     container_name: n8n_achahui_precios
     restart: always
-    depends_on:
-      - db_precios
+     #depends_on:
+      #- db_precios
     environment:
       - N8N_HOST=${N8N_DOMAIN}
       - N8N_PORT=5678
@@ -49,8 +49,8 @@ services:
     build: ./backend
     container_name: api_mi_precio_26
     restart: always
-    depends_on:
-      - db_precios
+    #depends_on:
+      #- db_precios
     environment:
       - DATABASE_URL=postgres://${DB_USER}:${DB_PASSWORD}@db_precios:5432/${DB_NAME}
     networks:
