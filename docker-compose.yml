@@ -1,17 +1,17 @@
 services:
   # --- base de datos ---
-  db_precios:
-    image: postgres:15-alpine
-    container_name: db_precios_colegios
-    restart: always
-    environment:
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_DB: ${DB_NAME}
-    volumes:
-      - ../postgres_data:/var/lib/postgresql/data 
-    networks:
-      - web-proxy-network
+  #db_precios:
+   # image: postgres:15-alpine
+   # container_name: db_precios_colegios
+   # restart: always
+   # environment:
+   #   POSTGRES_USER: ${DB_USER}
+   #   POSTGRES_PASSWORD: ${DB_PASSWORD}
+    #  POSTGRES_DB: ${DB_NAME}
+   # volumes:
+   #   - ../postgres_data:/var/lib/postgresql/data 
+   # networks:
+   #   - web-proxy-network
 
   # --- n8n  ---
   n8n_precios:
