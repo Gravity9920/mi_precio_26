@@ -10,7 +10,7 @@ function App() {
   const [isUpdating, setIsUpdating] = useState(false) // Estado para el botón
   const [error, setError] = useState(null)
 
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api/precios'
+  const API_URL = import.meta.env.VITE_API_URL || 'http://api_mi_precio_26:3000/api/precios'
   const N8N_WEBHOOK = 'https://n8n.gravity.net.pe/webhook/actualizar_precios' // Reemplaza con tu Webhook de n8n
 
   const fetchPrecios = async () => {
